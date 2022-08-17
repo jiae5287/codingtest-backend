@@ -1,0 +1,32 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.2'
+	id 'io.spring.dependency-management' version '1.0.12.RELEASE'
+	id 'java'
+}
+
+group = 'seokjiae'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// json
+
+	// Spring reactive : WebClient
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	testImplementation 'io.projectreactor:reactor-test'
+	// url 유효성 검사
+	implementation 'commons-validator:commons-validator:1.7'
+	// thymeleaf
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	// Spring web
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
