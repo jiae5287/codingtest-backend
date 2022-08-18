@@ -9,11 +9,21 @@
 ## 사용 스택 및 세팅
 - Java 11
 - Spring Boot (Ver 2.7.2)
-- Bootstrap
+- Bootstrap (Ver 5.2.0)
 - IntelliJ
 
 ## 백엔드 & 프론트엔드 설명
 1. Spring Boot
-* 
+* URL을 HTTP GET 방식으로 받아온다.
+* URL 유효성 검사를 실행한다.
+* URL이 유효하다면, oembed의 providers.json 파일에 들어있는 scheme인지 확인한다.
+* scheme에 따라, 미리 만들어 뒀던, 알맞은 provider 관련 객체를 가져온다. (fatory pattern과 비슷한 구조)
+* oembed url을 생성한다.
+* WebClient를 이용해 Embed 요청 결과를 받아온다.
+* 받아온 결과를 화면에 보여준다.
+
+<br>
 
 2. Bootstrap
+* 간단한 페이지 디자인을 위해 사용한 것이므로 CDN(Contents Delivery Network)을 사용하여 라이브러리를 가져왔다.
+* Provider마다 Json 데이터의 변수가 다르므로 thymeleaf를 사용해서 동적으로 테이블 생성했다.
