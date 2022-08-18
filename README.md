@@ -3,8 +3,6 @@
 youtube, twitter, vimeo 등의 컨텐츠를 미리 보여줍니다. <br>
 URL을 입력받고 oEmbed 데이터를 수집하여 table로 보여줍니다. <br>
 
-<img width="1239" alt="스크린샷 2022-08-18 오전 10 07 03" src="https://user-images.githubusercontent.com/91924087/185270033-927819cc-4e9b-4ec0-b66e-00ef8cfa4675.png">
-
 ## oEmbed란?
 [oEmbed 공식사이트](https://oembed.com)에 따르면, 현재 사이트에서 다른 사이트의 URL을 내장 표현으로 사용할 수 있도록 하는 Format입니다.<br>
 유저가 현재 사이트에 Resource 링크를 입력하면 웹사이트들이 Resource를 직접 파싱하지 않고, <br>
@@ -31,3 +29,6 @@ URL을 입력받고 oEmbed 데이터를 수집하여 table로 보여줍니다. <
 2. Bootstrap
 * 간단한 페이지 디자인을 위해 사용한 것이므로 CDN(Contents Delivery Network)을 사용하여 라이브러리를 가져왔다.
 * Provider마다 Json 데이터의 변수가 다르므로 thymeleaf를 사용해서 동적으로 테이블 생성했다.
+
+## ScreenShot
+<img width="1239" alt="스크린샷 2022-08-18 오전 10 07 03" src="https://user-images.githubusercontent.com/91924087/185270033-927819cc-4e9b-4ec0-b66e-00ef8cfa4675.png">
