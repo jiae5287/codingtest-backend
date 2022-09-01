@@ -15,7 +15,9 @@ public class OEmbedServiceImpl implements OEmbedService {
 
   @Override
   public Map<String, Object> getOEmbedInfo(String requestUrl) {
+    // delegateOEmbedUrlConverter를 통해 oembed url을 가져온다.
     String oembedUrl = delegateOEmbedUrlConverter.convert(requestUrl);
+    // oembed url을 가지고 http 요청을 보내 결과값을 받아온다.
     return httpQueryService.query(oembedUrl);
   }
 }
